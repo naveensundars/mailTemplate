@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../../public/fonts/SegoeUI.eot");
+  src: url("../../../public/fonts/SegoeUI.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../public/fonts/SegoeUI.woff2") format("woff2"),
+    url("../../../public/fonts/SegoeUI.woff") format("woff"),
+    url("../../../public/fonts/SegoeUI.ttf") format("truetype"),
+    url("../../../public/fonts/SegoeUI.svg#SegoeUI") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../../public/fonts/SegoeUI-Bold.eot");
+  src: url("../../../public/fonts/SegoeUI-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../../public/fonts/SegoeUI-Bold.woff2") format("woff2"),
+    url("../../../public/fonts/SegoeUI-Bold.woff") format("woff"),
+    url("../../../public/fonts/SegoeUI-Bold.ttf") format("truetype"),
+    url("../../../public/fonts/SegoeUI-Bold.svg#SegoeUI-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.webmailBody {
+  margin-top: 52px;
+  font-family: "Segoe UI";
+  .webmailLeftSide {
+    width: 250px;
+    border-right: 1px solid #e1e1e1;
+    position: fixed;
+    height: calc(100vh - 77px);
+    top: 52px;
+    .filterMail {
+      height: 32px;
+      padding: 4px 14px;
+      width: 100%;
+      border: none;
+      background-color: #f5f5f5;
+    }
+    .webmailLeftList {
+      height: calc(100vh - 110px);
+      overflow: auto;
+      ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+          list-style: none;
+          height: 28px;
+          display: inline;
+          cursor: pointer;
+          line-height: 28px;
+          font-size: 14px;
+          .webmailLeftListText {
+            padding-left: 22px;
+            &:hover {
+              background-color: #f3f3f3;
+            }
+            svg {
+              position: relative;
+              top: 6px;
+              left: -5px;
+            }
+          }
+          ul {
+            margin: 0px;
+            padding: 0px;
+            li {
+              list-style: none;
+              height: 28px;
+              cursor: pointer;
+              line-height: 28px;
+              font-size: 14px;
+              .webmailLeftListInner {
+                padding-left: 56px;
+                display: flex;
+                &:hover {
+                  background-color: #f3f3f3;
+                }
+                .mailCount {
+                  margin-left: auto;
+                  padding-right: 16px;
+                  color: #3b97e0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .webmailRightSide {
+    width: calc(100% - 250px);
+    margin-left: auto;
+    .webmailRightSideHeader {
+      height: 32px;
+      background-color: #f5f5f5;
+    }
+    .RightSideInner {
+      display: flex;
+      .RightSideLeft {
+        width: 400px;
+        border-right: 1px solid #e1e1e1;
+        height: calc(100vh - 110px);
+        overflow: auto;
+        .RightSideLeftHeader {
+          background-color: #ffff;
+          padding: 10px 22px;
+          border-bottom: 1px solid #e1e1e1;
+          h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+          }
+        }
+        ul {
+          margin: 0px;
+          padding: 0px;
+          li {
+            border-bottom: 1px solid #f5f5f5;
+            list-style: none;
+            .emailTemplateListArea {
+              display: flex;
+              border-right: 3px solid transparent;
+              &:hover {
+                background-color: #f3f3f3;
+              }
+              &.mailUnread {
+                border-right: 3px solid #a0a0a0;
+                .mailSubject {
+                  color: #3b97e0;
+                }
+                .emailTemplateTime {
+                  color: #3b97e0;
+                }
+              }
+              .emailTemplateList {
+                padding: 12px 22px;
+                width: calc(100% - 115px);
+                h2 {
+                  font-size: 17px;
+                  margin: 0px;
+                  margin-bottom: 6px;
+                  font-weight: normal;
+                }
+                p {
+                  margin: 0px;
+                  font-size: 12px;
+                  height: 22px;
+                  line-height: 22px;
+                }
+                .mailBodyList {
+                  color: #828282;
+                }
+              }
+              .emailTemplateTime {
+                width: 90px;
+                text-align: center;
+                line-height: 94px;
+                font-size: 12px;
+                font-weight: 500;
+                color: #8e8e8e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
